@@ -1,17 +1,40 @@
-## Prototype L Template
+# Frontend Boilerplate
+A react boilerplate with tools used like typescript, styled components etc
 
-## Set up db
-1. install docker
-2. in one terminal, run `docker-compose up --build`. This gets the db up and running. 
-3. In another terminal, run `docker-compose run --rm app python manage.py migrate`. In fact use this command to run anything adhoc. 
-4. now cd into db_test_app and run `docker build . -t app && docker run --net=host app`.  
+![Boilerplate: History's Mechanical Marvel](http://timetunnel.bigredhair.com/boilerplate/BP-comic.jpg)
 
-### Adhoc commands
+### setup
 
-docker-compose run --rm app python manage.py startapp pltemplate
+install node (>=12) and yarn 
 
-docker-compose run --rm app python manage.py populate_db
+1. `yarn install` - installs all dependencies
 
-## Set up application
+2. `yarn start` and got to localhost:1234 to see your project running.
 
-1.  `docker-compose up --build` and go to http://localhost:8000/api
+
+### commands
+
+1. `yarn start` - runs server is dev mode
+2. `yarn build` - builds and bundles frontend package and store in `dist`
+3. `yarn tcheck` - typechecks
+4. `yarn create-component NewComponent` - use this command to add a new component.
+
+
+### Use cases
+
+User will come select the folder path with images that he wants to label.
+
+They would be able to see images that are not labelled, he would be able to select a section in the image and a form pops up with the fields that he wanted to label for. 
+
+When they press done, a new unlabelled image is shown. 
+
+All the annotations are saved in a csv. and csv files are regularly committed.
+
+
+### Tasks
+
+[] select a folder with images. load all the images and display it in some form.
+
+[] allow activites on images. User should be able to select a section and form should open. On pressing done, a new image should show up.
+
+[] add actions on form submit and save the data. 
